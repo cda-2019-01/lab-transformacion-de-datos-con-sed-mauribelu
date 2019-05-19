@@ -1,6 +1,5 @@
 # Escriba su código aquí
 #!/bin/bash
-
 #Transformacion de fecha
 sed 's/\//-/g' data.csv > data1.csv
 sed 's/-\([0-9][0-9]\);/-20\1;/' data1.csv > data2.csv

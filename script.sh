@@ -1,5 +1,6 @@
 # Escriba su código aquí
 #!/bin/bash
+
 #Transformacion de fecha
 sed 's/\//-/g' data.csv > data1.csv
 sed 's/-\([0-9][0-9]\);/-20\1;/' data1.csv > data2.csv
@@ -18,7 +19,9 @@ sed -e 's:^,:\\N,:g' -e 's:,,:,\\N,:g' -e 's:,,:,\\N,:g' -e 's:,$:,\\N:g' data7.
 sed 's|\,N|,\\N|g' data8.csv > data9.csv
 #Reemplazar ,0 por .0
 sed 's|,0|.0|g' data9.csv > LabFinal.csv
+#Generar los registros que no tienen registros nulos
+#sed '\:\N:d' data9.csv > LabFinal1.csv
 #Borrar archivos de salida
 rm data*
-#Mostrar  lab final
+#Mostrar final
 cat LabFinal.csv

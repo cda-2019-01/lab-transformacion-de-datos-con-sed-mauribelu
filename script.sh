@@ -23,7 +23,7 @@ sed 's/,N/,\\N/g' data8.csv > data9.csv
 sed 's/,,/,\\N,/g' data9.csv > data10.csv
 # Cambio de espacio vacio despues de coma
 sed 's/,$/,\\N/g' data10.csv > labfinal.csv
-# Extraer registros no nulos
+# Extraer b registros no nulos
 #sed '/\N/d' data10.csv > labfinal.csv
 # Borrar archivos resultantes
 rm data*

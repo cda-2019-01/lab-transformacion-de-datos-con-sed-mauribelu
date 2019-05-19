@@ -23,5 +23,5 @@ sed 's|,0|.0|g' data9.csv > LabFinal.csv
 #sed '\:\N:d' data9.csv > LabFinal1.csv
 #Borrar archivos de salida
 rm data*
-#Mostrar final
+#Mostrar el lab final
 cat LabFinal.csv
